@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine & Harold's Wedding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/button-89.css">
+    <link rel="stylesheet" type="text/css" href="css/main-css.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1 class="names fadeInBottom-animation">Catherine & Harold</h1>
+            <div class="divider"></div>
+            <p class="date fadeInUp-animation">December 22, 2025 • Church Location</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <div class="rsvp-top-button">
+                <button class="button-89" role="button">RSVP HERE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section id="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image"></div>
+            </div>
+            <button class="add-to-calendar" role="button">ADD TO CALENDAR</button>
+        </div>
+    </section>
+
+    <!-- Wedding Details Section -->
+    <section id="details">
+        <div class="white-bg container">
+            <div class="details-container justify-left">
+                <div class="location-card">
+                    <img src="png/Ceremony.png" class="ceremony-png">
+                    <p>Saturday, December 20, 2025</p>
+                    <span>Ceremony: 12:00 PM</span>
+                    <div class="church-png"></div>
+                    <button class="view-map-btn">VIEW MAP</button>
+                </div>
+
+            </div>
+            <div class="details-container justify-right">
+                <div class="location-card ">
+                    <h3 class="detail-title">Additional Info</h3>
+                    <p>Cocktail attire</p>
+                    <p>Valet parking available</p>
+                    <p>Accommodations nearby</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <div class="container">
+            <h2 class="section-title rsvp-title">We Hope You Can Join Us!</h2>
+            <div class="rsvp-form">
+                <h3 style="margin-bottom: 20px; color: var(--accent);">RSVP</h3>
+                <p style="margin-bottom: 20px;">Kindly respond by December 1, 2025</p>
+                
+                <form id="rsvpForm" action="https://formspree.io/f/YOUR_ACTUAL_FORM_ID" method="POST">
+                    <input type="hidden" name="_subject" value="Wedding RSVP from {{name}}">
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="" disabled selected>Select number of guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Will you be attending? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="attending-yes" name="attending" value="Yes, I'll be there" required>
+                                <label for="attending-yes">Yes, I'll be there</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="attending-no" name="attending" value="Sorry, I can't make it" required>
+                                <label for="attending-no">Sorry, I can't make it</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions</label>
+                        <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know of any dietary restrictions..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message for the Couple</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Share your well wishes..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Response</button>
+                </form>
+                
+                <div class="confirmation" id="confirmation">
+                    <i class="fas fa-check-circle" style="font-size: 3rem; color: #4CAF50; margin-bottom: 15px;"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your response has been recorded. We look forward to celebrating with you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>With love, Sarah & Michael</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">© 2025 Catherine & Harold's Wedding</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('December 20, 2025 12:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // RSVP Form Handling
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                guests: document.getElementById('guests').value,
+                dietary: document.getElementById('dietary').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Replace with your Google Apps Script URL
+            fetch('daPOST.js', {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('rsvpForm').style.display = 'none';
+                document.getElementById('confirmation').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your RSVP. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
